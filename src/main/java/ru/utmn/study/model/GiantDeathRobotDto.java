@@ -13,6 +13,9 @@ import lombok.Data;
 @Data
 public class GiantDeathRobotDto {
 
+  @JsonProperty(value = "UUID")
+  private String uuid;
+
   @JsonProperty(value = "PilotName", required = true)
   private String pilotName;
 

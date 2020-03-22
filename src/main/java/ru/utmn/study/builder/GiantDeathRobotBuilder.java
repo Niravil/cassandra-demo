@@ -24,6 +24,7 @@ public class GiantDeathRobotBuilder {
   private LocalDate extertmintaionDate;
   private Set<String> deathGuns;
   private Set<DeathGunDto> deathGunDtos;
+  private String uuid;
 
   public static GiantDeathRobotBuilder theRobot() {
     return new GiantDeathRobotBuilder();
@@ -55,11 +56,17 @@ public class GiantDeathRobotBuilder {
     return this;
   }
 
+  public GiantDeathRobotBuilder withUUID(UUID uuid) {
+    this.uuid = uuid.toString();
+    return this;
+  }
+
   /**
    * Выполняет построение отдаваемого сервисом результата на основе переданных данных
    */
   public GiantDeathRobotDto buildDto() {
     GiantDeathRobotDto giantDeathRobotDto = new GiantDeathRobotDto();
+    giantDeathRobotDto.setUuid(this.uuid);
     giantDeathRobotDto.setPilotName(this.pilot);
     giantDeathRobotDto.setDateExterminationBegin(this.extertmintaionDate);
     if (this.deathGunDtos != null) {
