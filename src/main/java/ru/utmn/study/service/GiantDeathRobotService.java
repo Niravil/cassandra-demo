@@ -95,7 +95,7 @@ public class GiantDeathRobotService {
   }
 
   /**
-   * Выполняет поиск всех роботв
+   * Выполняет поиск всех роботов
    *
    * @param page Номер страницы
    * @param pageSize Количество элементов на странице

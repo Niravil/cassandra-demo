@@ -13,6 +13,7 @@ import ru.utmn.study.model.GiantDeathRobotDto;
 
 /**
  * Единый строитель роботов
+ * Частично избыточен, демонстрация
  *
  * @author vasilev
  */
