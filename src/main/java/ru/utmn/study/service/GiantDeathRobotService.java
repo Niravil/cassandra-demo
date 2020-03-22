@@ -44,6 +44,7 @@ public class GiantDeathRobotService {
     giantDeathRobotRepository.save(giantDeathRobot);
 
     giantDeathRobotDto.setDateExterminationBegin(exterminationBegin);
+    giantDeathRobotDto.setUuid(giantDeathRobot.getId().toString());
 
     return giantDeathRobotDto;
   }
@@ -62,6 +63,7 @@ public class GiantDeathRobotService {
         .withPilot(giantDeathRobot.getPilot())
         .withExterminationDate(giantDeathRobot.getDateExterminationBegin())
         .withDtoDeathGuns(giantDeathRobot.getDeathGuns())
+        .withUUID(giantDeathRobot.getId())
         .buildDto();
   }
 
@@ -79,6 +81,7 @@ public class GiantDeathRobotService {
         .withPilot(giantDeathRobot.getPilot())
         .withExterminationDate(giantDeathRobot.getDateExterminationBegin())
         .withDtoDeathGuns(giantDeathRobot.getDeathGuns())
+        .withUUID(giantDeathRobot.getId())
         .buildDto();
   }
 
@@ -108,6 +111,7 @@ public class GiantDeathRobotService {
             .withPilot(r.getPilot())
             .withExterminationDate(r.getDateExterminationBegin())
             .withDtoDeathGuns(r.getDeathGuns())
+            .withUUID(r.getId())
             .buildDto());
   }
 
